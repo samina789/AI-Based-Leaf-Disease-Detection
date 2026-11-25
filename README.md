@@ -4,9 +4,9 @@
 
 ## Project Overview
 
-AI-Based Leaf Disease Detection is an Artificial Intelligence and Deep Learning project designed to identify potential plant diseases through leaf images.
+AI-Based Leaf Disease Detection is an Artificial Intelligence and Deep Learning project designed to identify plant diseases through leaf images.
 
-The proposed system will analyze uploaded leaf images using a trained AI model to classify leaves as healthy or identify possible diseases from supported categories.
+The system uses a trained deep learning model to classify leaf images into healthy and diseased categories across 38 supported classes.
 
 ## Project Objectives
 
@@ -18,45 +18,63 @@ The proposed system will analyze uploaded leaf images using a trained AI model t
 
 ## Problem Statement
 
-Plant diseases can negatively affect crop quality and agricultural production. Identifying diseases manually may require time and specialized knowledge. This project aims to develop an AI-based approach to make preliminary plant disease identification more accessible and efficient.
+Plant diseases can negatively affect crop quality and agricultural production. Identifying diseases manually may require time and specialized knowledge. This project aims to use AI-based image classification to make preliminary plant disease identification more accessible.
 
 ## Proposed Solution
 
-The proposed system will use Computer Vision and Deep Learning techniques to analyze uploaded leaf images and predict possible plant diseases.
+The project uses Computer Vision and Transfer Learning to analyze plant leaf images and predict their disease categories.
 
-The system will preprocess the image, analyze it using a trained model and display the predicted disease or healthy category along with relevant information.
+The model preprocesses input images, analyzes them using MobileNetV2 and generates a predicted class with a confidence score.
 
-## Proposed Technologies
+## Technologies Used
 
 - Python
 - Artificial Intelligence (AI)
 - Machine Learning (ML)
 - Deep Learning
 - TensorFlow / Keras
+- MobileNetV2 (Transfer Learning)
 - CNN (Convolutional Neural Network)
-- Computer Vision
-- OpenCV
-- Flask
-- HTML, CSS and JavaScript
+- Google Colab
 
-## Planned Features
+## Implemented Features
 
-- Upload plant leaf images.
-- Analyze leaf images using AI.
-- Identify possible plant diseases.
-- Classify healthy and diseased leaves.
-- Display prediction results and confidence score.
-- Provide basic information about detected diseases.
+- Plant leaf image classification.
+- Identification of healthy and diseased leaves.
+- Support for 38 plant disease categories.
+- Image preprocessing and prediction.
+- Prediction confidence score.
+- Model training and evaluation.
+- Classification Report and Confusion Matrix.
 
 ## Dataset & Model
 
-The system will use a labeled plant-leaf image dataset, such as PlantVillage or another suitable dataset, containing healthy and diseased leaf images.
+- **Dataset:** PlantVillage
+- **Number of Classes:** 38
+- **Model:** MobileNetV2 with Transfer Learning
+- **Image Size:** 224 × 224
+- **Training Epochs:** 10
+- **Framework:** TensorFlow / Keras
 
-A CNN or Transfer Learning model may be used to classify images into supported disease categories. The model will be evaluated using metrics such as accuracy, precision, recall and F1-score.
+## Model Performance
+
+The model was evaluated on 10,861 validation images.
+
+| Evaluation Metric | Result |
+|---|---:|
+| Validation Accuracy | 95.41% |
+| Weighted Precision | 0.95 |
+| Weighted Recall | 0.95 |
+| Weighted F1-Score | 0.95 |
+| Macro F1-Score | 0.94 |
+
+These results represent validation performance. Actual performance on real-world leaf images may vary.
 
 ## Project Scope
 
-The project focuses on image-based plant disease identification using AI and Deep Learning. The initial system will support the plant species and disease categories included in the selected dataset. Future improvements may include additional plant species and disease management recommendations.
+The project focuses on image-based plant disease classification using AI and Deep Learning. The current model supports the 38 categories available in the PlantVillage dataset.
+
+Future improvements may include additional plant species, more diverse real-world images and disease management recommendations.
 
 ## Project Source
 
